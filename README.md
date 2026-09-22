@@ -29,7 +29,9 @@ Secondary analysis was performed using a logistic model to model wellness score.
 
 
 ### Key Findings
-The primary ANCOVA analysis yielded a 95% confidence interval for the treatment effect $\tau$:$-4.481 \pm t_{0.975;118} \times 0.8287 = [-6.12, -2.84]$. Because the confidence interval does not contain zero, we reject the null hypothesis $H_0$, concluding a statistically significant treatment effect.
+The primary ANCOVA analysis yielded a 95% confidence interval for the treatment effect $\tau$ : 
+$-4.481 \pm t_{0.975;118} \times 0.8287 = [-6.12, -2.84]$ . 
+Because the confidence interval does not contain zero, we reject the null hypothesis $H_0$, concluding a statistically significant treatment effect.
 
 ## Trial 2
 
