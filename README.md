@@ -54,7 +54,31 @@ Sample size is selected via Monte Carlo simulation of a two-sided chi-squared te
 ### Analysis
 
 Logistic regression is employed, adjusting for all covariates. This results in the following model:
+
 $$Y_i | \mathbf{x_i} \overset{indep.}{\sim} Bernoulli(p_i)$$
 $$\log \left( \frac{p_i}{1-p_i} \right) = \beta_0 + \beta_T G_i + \mathbf{\beta}^\top \mathbf{x_i}$$
+where :
+* $G_i$ is an indicator variable where $G_i=1$ for participants in the treatment arm (T) and $G_i=0$ for the control arm (C).
+* Other covariates are represented by the vector $mathbf{x_i}$ with coefficients $\mathbf{\beta}$
+
+We consider the odds ratio of the logistic regression model as well as the number needed to treat, absolute risk difference and risk ratio. Wilson confidence intervals are used as they produce asymmetric intervals with better coverage and are bounded between 0 and 1. 
+
+Diagnostics are presented, including a ROC curve and calibration.
+
+<img width="700"  alt="Screenshot 2026-09-22 at 18 59 59" src="https://github.com/user-attachments/assets/4b682e6a-059d-412e-af0c-9195ed621492" />
+
+<img width="700" alt="Screenshot 2026-09-22 at 19 00 12" src="https://github.com/user-attachments/assets/d6eeea21-1e5f-4a29-acd4-d1d29cadd5ab" />
 
 ### Key Findings
+The results of the primary analysis, covariate-adjusted logistic regression, indicated that the treatment
+Chronquel reduces probability of echoes in participants with STEE. 
+* The p-value was 1.08 × 10−11 and so the null hypothesis was strongly rejected.
+* The odds ratio was 0.259, so that the odds were reduced to 26%
+of those of the control arm.
+* We considered the simpler logistic regression without adjusting for covariates,
+from which we obtain sample proportions as probability estimates, with $p_C = 0.645$ and $p_T = 0.352$ for the
+control and treatment arms respectively.
+* 45.4% risk reduction of an echo
+in the treatment group when compared with the control.
+* The control group proportion was estimated
+to be 0.6 and was observed as 0.645 - indicative of a well-calibrated trial.
