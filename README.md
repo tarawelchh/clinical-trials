@@ -48,13 +48,13 @@ We test the following hypotheses regarding the probability of a patient experien
 
 Sample size is selected via Monte Carlo simulation of a two-sided chi-squared test. Participants are allocated arms sequentially via minimisation.
 
-<img width="459" height="174" alt="Screenshot 2026-09-22 at 18 49 26" src="https://github.com/user-attachments/assets/d9b5d282-101b-44b7-b4cd-5dc244f3abcb" />
+<img width="700" alt="Screenshot 2026-09-22 at 18 49 26" src="https://github.com/user-attachments/assets/d9b5d282-101b-44b7-b4cd-5dc244f3abcb" />
 
 
 ### Analysis
 
 Logistic regression is employed, adjusting for all covariates. This results in the following model:
-$$ Y_i | \mathbf{x_i} \overset{indep.}{~} Bernoulli(p_i)$$
-$$ \log \left( \frac{p_i}{1-p_i} \right) = \beta_0 + \beta_T G_i + \mathbf{\beta}^\top \mathbf{x_i}$$
+$$Y_i | \mathbf{x_i} \overset{indep.}{~} Bernoulli(p_i)$$
+$$\log \left( \frac{p_i}{1-p_i} \right) = \beta_0 + \beta_T G_i + \mathbf{\beta}^\top \mathbf{x_i}$$
 
 ### Key Findings
