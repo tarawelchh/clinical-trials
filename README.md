@@ -36,9 +36,25 @@ Because the confidence interval does not contain zero, we reject the null hypoth
 ## Trial 2
 
 ### Overview
+This trial concerns patients who have recently been diagnosed with a fictional condition called Spontaneous Temporal Echo Episodes
+(STEE), causing patients to experience ‘echoes’ which are involuntary and disorienting, and can cause psychological
+distress and social disruption. The treatment offered to the intervention group is Chronquel (TM), which has been developed to stabilize
+chronosynaptic firing. The control group will be given a placebo. The primary outcome variable is whether
+a participant has had any ‘echoes’ within 10 days of starting the trial. The control probability for this is
+estimated to be around $\pi_C = 0.6$.
 
 ### Trial Design and Allocation 
+We test the following hypotheses regarding the probability of a patient experiencing an echo within 10 days of starting the trial, $H_0: \pi_T = \pi_C$, $H_1: \pi_T \neq \pi_C$.
+
+Sample size is selected via Monte Carlo simulation of a two-sided chi-squared test. Participants are allocated arms sequentially via minimisation.
+
+<img width="459" height="174" alt="Screenshot 2026-09-22 at 18 49 26" src="https://github.com/user-attachments/assets/d9b5d282-101b-44b7-b4cd-5dc244f3abcb" />
+
 
 ### Analysis
+
+Logistic regression is employed, adjusting for all covariates. This results in the following model:
+$$ Y_i | \mathbf{x_i} \overset{indep.}{~} Bernoulli(p_i)$$
+$$ \log \left( \frac{p_i}{1-p_i} \right) = \beta_0 + \beta_T G_i + \mathbf{\beta}^\top \mathbf{x_i}$$
 
 ### Key Findings
