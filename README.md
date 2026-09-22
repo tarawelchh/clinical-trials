@@ -10,7 +10,7 @@ Sufferers can feel very lethargic and generally unwell. The primary outcome vari
 
 ### Trial Design and Allocation 
 We test the hypotheses:
-$\mathcal{H}_0 : \tau = 0 \newline \mathcal{H}_1 : \tau \neq 0 $
+$\mathcal{H}_0 : \tau = 0 ,  \mathcal{H}_1 : \tau \neq 0 $
 where $\tau$ represents the treatment effect. 
 
 * A sample size of 62 participants per arm is calculated to ensure a power of 90%, after incorporating the correlation between baseline and endline temperature differential measurements and also accounting for potential attrition.
