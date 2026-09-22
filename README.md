@@ -54,7 +54,7 @@ Sample size is selected via Monte Carlo simulation of a two-sided chi-squared te
 ### Analysis
 
 Logistic regression is employed, adjusting for all covariates. This results in the following model:
-$$Y_i | \mathbf{x_i} \overset{indep.}{\tilde} Bernoulli(p_i)$$
+$$Y_i | \mathbf{x_i} \overset{indep.}{\sim} Bernoulli(p_i)$$
 $$\log \left( \frac{p_i}{1-p_i} \right) = \beta_0 + \beta_T G_i + \mathbf{\beta}^\top \mathbf{x_i}$$
 
 ### Key Findings
