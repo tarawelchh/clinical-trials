@@ -19,7 +19,9 @@ where $\tau$ represents the treatment effect.
 ### Analysis
 * The VIF is calculated and covariates with VIF score greater than 3 are removed (other than sex as this was used for stratification).
 * An ANCOVA model is used, adjusting for all remaining covariates. No interaction terms are introduced. This results in a linear model of the form:
+  
 $ \delta_{\text{endline,i}} = \beta_0 + \tau G_i + \beta_1 \delta_{\text{baseline,i}} + \beta_2 a_i + \beta_3 s_i + \beta_4 w_i + \varepsilon_i,$
+
 where $\varepsilon$ is modelled as i.i.d normal, $\delta$ represents the temperature differential, $G_i$ is an indicator variable with $G_i =1$ for participants in arm T and $G_i =0$ for those in arm C. Terms $a$, $s$, and
 $w$ represent the covariates age, sex and weight respectively, with $s$ a factor (0 for female and 1 for male).
 $\beta_i \in \mathbb{R}$ are the coeffcients of the linear model which we are estimating and $i = 1, . . . 124$ represent the
